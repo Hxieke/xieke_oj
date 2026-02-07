@@ -1,0 +1,54 @@
+version: '3'
+services:
+  xiekeoj-backend-gateway:
+    container_name: xiekeoj-backend-gateway
+    build:
+      context: ./xiekeoj-backend-gateway
+      dockerfile: Dockerfile
+    ports:
+      - "8101:8101"
+    networks:
+      - mynetwork
+
+  xiekeoj-backend-user-service:
+    container_name: xiekeoj-backend-user-service
+    build:
+      context: ./xiekeoj-backend-user-service
+      dockerfile: Dockerfile
+    ports:
+      - "8102:8102"
+    networks:
+      - mynetwork
+    depends_on:
+      - xiekeoj-backend-gateway
+
+  xiekeoj-backend-question-service:
+    container_name: xiekeoj-backend-question-service
+    build:
+      context: ./xiekeoj-backend-question-service
+      dockerfile: Dockerfile
+    ports:
+      - "8103:8103"
+    networks:
+      - mynetwork
+    depends_on:
+      - xiekeoj-backend-user-service
+      - xiekeoj-backend-gateway
+
+  xiekeoj-backend-judge-service:
+    container_name: xiekeoj-backend-judge-service
+    build:
+      context: ./xiekeoj-backend-judge-service
+      dockerfile: Dockerfile
+    ports:
+      - "8104:8104"
+    networks:
+      - mynetwork
+    depends_on:
+      - xiekeoj-backend-user-service
+      - xiekeoj-backend-question-service
+      - xiekeoj-backend-gateway
+
+# 网络，不定义的话就是默认网络
+networks:
+  mynetwork:

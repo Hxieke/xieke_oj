@@ -1,0 +1,11 @@
+${AnsiBackground.BLACK}${AnsiColor.BRIGHT_CYAN}
+  ___ ___                            ____  ___.__        ____  __.          ${AnsiColor.BRIGHT_RED}
+ /   |   \ __ _______    ____    ____\   \/  /|__| ____ |    |/ _|____      ${AnsiColor.BRIGHT_YELLOW}
+/    ~    \  |  \__  \  /    \  / ___\\     / |  |/ __ \|      <_/ __ \     ${AnsiColor.BRIGHT_GREEN}
+\    Y    /  |  // __ \|   |  \/ /_/  >     \ |  \  ___/|    |  \  ___/     ${AnsiColor.BRIGHT_BLUE}
+ \___|_  /|____/(____  /___|  /\___  /___/\  \|__|\___  >____|__ \___  >    ${AnsiColor.BRIGHT_MAGENTA}
+       \/            \/     \//_____/      \_/        \/        \/   \/     ${AnsiColor.BRIGHT_WHITE}
+╔═══════════════════════════════════════════════════════════════════════╗
+║               by 好程序员黄勰科：https://github.com/Hxieke               ║
+╚═══════════════════════════════════════════════════════════════════════╝
+${AnsiBackground.DEFAULT}
